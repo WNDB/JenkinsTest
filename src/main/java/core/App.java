@@ -7,4 +7,7 @@ public class App {
     public static void main(String args[]){
         System.out.println("**************************Projekt ruszyl**********************************************");
     }
+    public static Integer returnOne(){
+        return 1;
+    }
 }
