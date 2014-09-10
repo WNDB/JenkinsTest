@@ -9,4 +9,10 @@ public class AppTest {
         assert(App.returnOne() == 1);
         System.out.println("dziala");
     }
+
+    @Test
+    public void testReturnTwo() throws Exception {
+        assert(App.returnTwo() == 2);
+        System.out.println("dziala");
+    }
 }
