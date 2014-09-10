@@ -1,9 +1,14 @@
 apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'application'
 
 sourceCompatibility = 1.5
 version = '1.0'
 mainClassName = 'core.App'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
 
 repositories {
     mavenCentral()
@@ -12,4 +17,13 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile 'org.testng:testng:6.8.8'
+}
+
+test {
+    useTestNG()
+    testLogging {
+                // Show that tests are run in the command-line output
+                showStandardStreams = true
+                events 'started', 'passed'
+    }
 }
