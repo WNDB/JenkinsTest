@@ -10,4 +10,5 @@ public class App {
     public static Integer returnOne(){
         return 1;
     }
+    public static Integer returnTwo() { return 2; }
 }
